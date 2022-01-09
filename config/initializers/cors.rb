@@ -14,8 +14,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 #       methods: [:get, :post, :put, :patch, :delete, :options, :head]
 
         allow do
-                origins 'localhost:3000', '127.0.0.1:3000' 
-                        #'https://cvwo-react-todo-list.herokuapp.com'
+                origins 'localhost:3000', '127.0.0.1:3000', 'https://todo-list-frontend-react.herokuapp.com' 
                         /\Ahttp:\/\/192\.168\.0\.\d{1,3}(:\d+)?\z/
                         # regular expressions can be used here
 
