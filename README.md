@@ -1,24 +1,43 @@
-# README
+# CVWO winter assignment AY 2021/22
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Name:** Bryan Lim Jing Xiang
 
-Things you may want to cover:
+**Matriculation No:** A0233605M
 
-* Ruby version
+**Application Link:** [todo-list](https://todo-list-frontend-react.herokuapp.com/)
 
-* System dependencies
+**Writeups:**
 
-* Configuration
+- [Mid-assignment writeup](./Writeup/BryanLimJingXiang_A0233605M.pdf)
+- [Final assignment writeup](./Writeup/BryanLimJingXiang_A0233605M_FinalWriteup.pdf)
 
-* Database creation
+[Frontend: react](https://github.com/bryanljx/frontend-react-todo-list)
 
-* Database initialization
+## Overview
 
-* How to run the test suite
+This project is currently deployed and hosted on heroku. Do note that the frontend and backend servers are hosted separately.
 
-* Services (job queues, cache servers, search engines, etc.)
+The tools/technology used are as follow:
 
-* Deployment instructions
+- react
+- material-ui
+- ruby on rails
+- postgresql
 
-* ...
+## Features
+
+- CRUD operations on todos
+- Creating, deleting tags
+- Adding/removing tags from todos
+- Filtering todos based on tags and/or completion status
+
+## Areas of improvement:
+
+- User authentication
+- Loading animation while fetching data (especially when first loading the page)
+- Pagination when there is too many todos
+- Using cron for scheduled backups of database, as well as compression and archival
+- UI/UX improvements
+- Deadlines and reminders
+- Calendar
+- Implement testing
