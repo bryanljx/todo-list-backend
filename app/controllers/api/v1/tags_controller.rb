@@ -22,9 +22,6 @@ class Api::V1::TagsController < ApplicationController
   def create
     if @todo
       if no_todo_tags
-        # @todo.tags.each do |t|
-        #   @todo.tags.delete(t)
-        # end
         @todo.tags.delete_all
       else
         @todo_tags = []
@@ -33,13 +30,6 @@ class Api::V1::TagsController < ApplicationController
         end
 
         @todo.tags = @todo_tags
-        # @todo.tags.each do |t|
-        #   @todo.tags.delete(t) unless @todo_tags.include?(t)
-        # end 
-
-        # @todo_tags.each do |t|
-        #   @todo.tags << t unless @todo.tags.include?(t)
-        # end
       end
       render json: @todo,  
           except: [:created_at, :updated_at],
@@ -98,6 +88,8 @@ class Api::V1::TagsController < ApplicationController
       params.require(:tags)
     end
 
+    # Checks if there are todo_tags passed in the params
+    # There were some problems with using params.permit(:tags) in todo_tags instead
     def no_todo_tags
       params.require(:empty)
     end
